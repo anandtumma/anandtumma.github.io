@@ -243,19 +243,7 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		/*------------------------------------------------------
   	/  Preloader
   	/------------------------------------------------------*/
-		<script>
-		    document.addEventListener("DOMContentLoaded", function() {
-		        let progressBar = document.getElementById("progress-bar");
 		
-		        setTimeout(() => {
-		            progressBar.style.width = "100%";
-		        }, 500); // Start after a short delay
-		
-		        setTimeout(() => {
-		            document.querySelector(".preloader").style.display = "none";
-		        }, 2500); // Hide preloader after animation
-		    });
-		</script>
 		
 		const svg = document.getElementById("preloaderSvg");
 		const svgText = document.querySelector(
