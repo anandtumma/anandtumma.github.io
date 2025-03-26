@@ -34,7 +34,85 @@
 <body>
 
     <!-- Preloader Area Start -->
-    <div class="preloader">
+
+<style>
+    .preloader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        z-index: 9999;
+    }
+
+    .preloader svg {
+        width: 100%;
+        height: 150px;
+    }
+
+    .preloader-heading {
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .progress-container {
+        width: 80%;
+        max-width: 400px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    .progress-bar {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, #ff00ff, #ffcc00);
+        transition: width 2s ease-in-out;
+    }
+
+    .load-text {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="preloader">
+    <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+        <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+    </svg>
+
+    <div class="preloader-heading">Crafting brilliance… give it a second to shine! 🌟🎨</div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let progressBar = document.getElementById("progress-bar");
+
+        setTimeout(() => {
+            progressBar.style.width = "100%";
+        }, 500); // Start after a short delay
+
+        setTimeout(() => {
+            document.querySelector(".preloader").style.display = "none";
+        }, 2500); // Hide preloader after animation
+    });
+</script>
+
+    
+<!--     <div class="preloader">
         
 
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
@@ -43,7 +121,6 @@
         </svg>
 
         <div class="preloader-heading">
-            <!-- <img class="loader_logo" src="assets/img/ANAND LOGO.svg" alt=""> -->
             <div class="load-text">
                 
                 <span>L</span>
@@ -55,7 +132,7 @@
                 <span>g</span>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Preloader Area End -->
 
 
