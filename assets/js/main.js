@@ -243,7 +243,19 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		/*------------------------------------------------------
   	/  Preloader
   	/------------------------------------------------------*/
-	
+		document.addEventListener("DOMContentLoaded", function() {
+        let progressBar = document.getElementById("progress-bar");
+
+        setTimeout(() => {
+            progressBar.style.width = "100%";
+        }, 500); // Start after a short delay
+
+        setTimeout(() => {
+            document.querySelector(".preloader").style.display = "none";
+        }, 2500); // Hide preloader after animation
+    });
+
+		
 		   
 		
 		const svg = document.getElementById("preloaderSvg");
@@ -256,7 +268,7 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
 		const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
-		tl.to(".preloader-heading .load-text , .preloader-heading .cont", {
+		tl.to(".preloader-heading .progress-containe , .preloader-heading .cont", {
 			delay: 1.5,
 			y: -100,
 			opacity: 0,
