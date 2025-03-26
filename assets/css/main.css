@@ -523,8 +523,8 @@ body.loaded {
 }
 
 .preloader .preloader-heading .load-text {
-	font-size: 18px;
-	font-weight: 150;
+	font-size: 20px;
+	font-weight: 200;
 /* 	letter-spacing: 5px; */
 	text-transform: none;
 	z-index: 20;
