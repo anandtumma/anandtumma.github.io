@@ -35,6 +35,65 @@
 
     <!-- Preloader Area Start -->
 
+
+    <style>
+.quality-services-video-section {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+.quality-services-video-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.service-tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.service-tabs label {
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+.service-tabs input[type="radio"] {
+  margin-right: 10px;
+}
+.service-video {
+  flex: 2;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .quality-services-video-section .container {
+    flex-direction: column;
+  }
+}
+</style>
+
+<script>
+const videoMap = {
+  uiux: 'videos/uiux.mp4',
+  website: 'videos/website.mp4',
+  app: 'videos/app.mp4',
+  branding: 'videos/branding.mp4',
+  animation: 'videos/animation.mp4',
+  "3d": 'videos/3d.mp4',
+  motion: 'videos/motion.mp4'
+};
+
+document.querySelectorAll('input[name="service"]').forEach(radio => {
+  radio.addEventListener('change', function () {
+    const video = document.getElementById('serviceVideo');
+    video.querySelector('source').src = videoMap[this.value];
+    video.load();
+    video.play();
+  });
+});
+</script>
+
 <!-- <style>
     .preloader {
         position: fixed;
